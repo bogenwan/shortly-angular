@@ -47,17 +47,18 @@ describe('Services', function () {
     });
 
     it('should add a new link with `addOne`', function () {
-      var github = { url: 'https://github.com/reactorcore' };
+      var github = { url: 'https://github.com/hackreactor' };
 
       $httpBackend
         .expect('POST', '/api/links', JSON.stringify(github))
         .respond(201, {
-          url: 'https://github.com/reactorcore',
-          title: 'reactorcore'
+          url: 'https://github.com/hackreactor',
+          title: 'Hack Reactor Labs'
         });
 
       Links.addOne(github).then(function (resp) {
         expect(resp.status).to.equal(201);
+        // console.log(resp);
         expect(resp.data.title).to.equal('Hack Reactor Labs');
       });
 
