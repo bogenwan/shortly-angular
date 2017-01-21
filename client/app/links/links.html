@@ -1,3 +1,10 @@
-<div id='container'>
+<div id='links-container' ng-controller="LinksController">
   <!-- Your html here -->
+    <ul>
+      <li class="link" class="visits" class="count" ng-repeat="link in data.links track by $index" ng-click="redirect($index)">
+      {{link.url}}
+      <a>{{link.vists}}</a>
+      </li>
+    </ul>
+    <p>{{Links.getAll()}}</p>
 </div>

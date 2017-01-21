@@ -4,15 +4,18 @@
     <meta charset="utf-8" />
     <title>Shortly</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
   </head>
   <body>
     <h1>Shortly</h1>
-
     <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
+    <div class="navigation">
+      <a href="#/links">Links</a>
+      <a href="#/shorten">Shorten</a>
+    </div>
     <div ng-view></div>
 
-    <script src="lib/angular/angular.js"></script>
-    <script src="lib/angular-route/angular-route.js"></script>
 
     <script src="app/auth/auth.js"></script>
     <script src="app/links/links.js"></script>

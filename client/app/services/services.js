@@ -11,6 +11,7 @@ angular.module('shortly.services', [])
         url: '/api/links'
       }).then(function (response) {
         response.status = 200;
+        console.log('################ getting', response.data);
         return response.data;
       }, function (err) {
         console.log(err);
@@ -23,7 +24,7 @@ angular.module('shortly.services', [])
         data: data
       }).then(function successCallback(response) {
         response.status = 201;
-        // console.log('#############', response.data.title);
+        console.log('$$$$', response.data.title);
         return response;
       }, function errorCallback(err) {
         console.log(err);

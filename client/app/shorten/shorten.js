@@ -4,6 +4,7 @@ angular.module('shortly.shorten', ['shortly.services'])
   // Your code here
   $scope.link = {url: $location};
   $scope.addLink = function() {
-    return Links.addOne($scope.link);
+    Links.addOne({url: $scope.newLink});
+    $scope.newLink = '';
   };
 });
